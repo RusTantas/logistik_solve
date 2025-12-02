@@ -32,6 +32,42 @@
         |   |
         6 — 7
 
+![alt text](image.png)
+
+graph LR
+    1 --- 2
+    2 --- 3
+    3 --- 4
+    3 --- 5
+    3 --- 8
+    5 --- 6
+    6 --- 7
+    7 --- 8
+    8 --- 9
+    9 --- 10
+
+classDef station fill:#4A90E2, color:white, stroke:#333, font-weight:bold;
+class 1,2,3,4,5,6,7,8,9,10 station;
+
+
+\begin{tikzpicture}[
+    station/.style={circle, draw=blue!80, fill=blue!20, thick, minimum size=1.2cm}
+]
+\node[station] (1) at (0,0) {1};
+\node[station] (2) at (2,0) {2};
+\node[station] (3) at (4,0) {3};
+\node[station] (4) at (6,0) {4};
+\node[station] (5) at (3,-1.5) {5};
+\node[station] (6) at (3,-3) {6};
+\node[station] (7) at (5,-3) {7};
+\node[station] (8) at (5,-1.5) {8};
+\node[station] (9) at (7,-1.5) {9};
+\node[station] (10) at (9,-1.5) {10};
+
+\draw (1) -- (2) -- (3) -- (4);
+\draw (3) -- (5) -- (6) -- (7) -- (8) -- (3);
+\draw (8) -- (9) -- (10);
+\end{tikzpicture}
 
 
 На станциях размещено **405 вагонов** (10 уже на месте), например:  
