@@ -117,3 +117,5 @@ python solve_adaptive.py
 
   50             2025       600             ❌ TIMEOUT          —             602.1
 
+  50            2025        3000            ✅ OPTIMAL          8             764.5
+
