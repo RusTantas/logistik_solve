@@ -7,9 +7,9 @@ from ortools.sat.python import cp_model
 # ======================
 # CONFIG
 # ======================
-TIME_LIMIT_SEC = 600.0    
+TIME_LIMIT_SEC = 1000.0    
 MAX_WORKERS = 28
-INPUT_FILE = "network_10_base.json"
+INPUT_FILE = "network_random_50.json"
 
 # ======================
 # ЗАГРУЗКА
@@ -294,7 +294,7 @@ if best_T is not None:
     avg_load = total_wagons_sent / total_trains if total_trains > 0 else 0
     
     print(f"   ➤ Всего поездов сформировано: {total_trains}")
-    print(f"   ➤ Средняя загрузка поезда: {avg_load:.2f} ваг. (мин: 5, макс: 30)")
+    print(f"   ➤ Средняя длина поезда: {avg_load:.2f} ваг. (мин: 5, макс: 30)")
     
     # Проверка доставки
     delivered = []
