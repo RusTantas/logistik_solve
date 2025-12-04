@@ -7,9 +7,9 @@ from ortools.sat.python import cp_model
 # ======================
 # CONFIG
 # ======================
-TIME_LIMIT_SEC = 10000.0    # ← можно ставить 600.0
+TIME_LIMIT_SEC = 600.0    
 MAX_WORKERS = 28
-INPUT_FILE = "network_random_200.json"
+INPUT_FILE = "network_10_base.json"
 
 # ======================
 # ЗАГРУЗКА
